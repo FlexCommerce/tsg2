@@ -1,0 +1,158 @@
+
+.s-row .s-grid-12 .s-grid-3,
+.rwd .s-row .s-grid-12 .s-grid-3 {
+    .shop_index & {
+        width: 230px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .s-row .s-grid-12 .s-grid-3,
+    .rwd .s-row .s-grid-12 .s-grid-3 {
+        .shop_index & {
+            width: 220px;
+        }
+    }
+}
+
+@media screen and (max-width: 979px) and (min-width: 768px) {
+
+    .s-row .s-grid-12 .s-grid-3,
+    .rwd .s-row .s-grid-12 .s-grid-3 {
+        .shop_index & {
+            width: 220px;
+        }
+    }
+}
+
+// mobile
+@media screen and (max-width: 767px) {
+    .rwd .main #box_mainproducts .products {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .s-row .s-grid-12 .s-grid-3,
+    .rwd .s-row .s-grid-12 .s-grid-3 {
+        width: 49%;
+
+        .shop_index & {
+            width: 49%;
+        }
+    }
+}
+
+//product height
+.products.viewphot {
+    .product {
+        @media screen and (min-width: 980px) {
+            height: auto;
+        }
+
+        .shop_index & {
+            height: 410px;
+        }
+    }
+}
+
+// oef product grid 4 on front page for rwd028
+.bottom-footer{
+    .container{
+        max-width: 100%;
+    }
+}
+.footer{
+    .innerfooter{
+        background-color: transparent;
+        ul.overall{
+            max-width: 100%;
+            li.head{
+                display: none;
+            }
+        }
+    }
+}
+.section_category{
+    margin-left: 0!important;
+    a{
+       
+        display: block;
+        height: auto;
+        img{
+            height: auto;
+            @media screen and (max-width:768px){
+                width: 100%;
+               
+            }
+        }
+    }
+}
+.ns-grid-3{
+    width: 30%;
+    margin: 0!important;
+    padding: 15px;
+    @media screen and (max-width:980px){
+        width: 45%;
+    }
+    @media screen and (max-width:768px){
+        width: 100%;
+    }
+}
+
+
+#box_mainproducts{
+    .buttons.f-row,
+    .boxhead{
+        display: none;
+    }
+}
+#single_banner{
+    img{
+        height: auto;
+    }
+}
+
+header .logo-bar{
+    .fx-social-wrapper{
+        display: none;
+    }
+    .link-logo{
+        text-align: left;
+    }
+    .search__container{
+        max-width: 284px;
+        position: relative;
+        top:initial;
+        left: initial;
+        margin-left: 0;
+        order: 1;
+        margin-left: auto;
+    }
+    .bbs-wrap{
+        flex-basis: 10%;
+        order: 2;
+        width: auto;
+        .fx-search{
+            display: none;
+        }
+        @media screen and(max-width:979px) {
+            flex-basis: initial;
+            .fx-search{
+                display: block;
+            }
+        }
+    }
+}
+.banner_full_width{
+    img{
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+}
+.menu .innermenu .menu-list{
+    text-align: left;
+}
