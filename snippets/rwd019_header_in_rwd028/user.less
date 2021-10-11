@@ -1,0 +1,99 @@
+/*
+    header like rwd019 in rwd028
+    if you want to use lang nad curr in hesader ajust flex value for each section in header
+*/
+
+
+//header
+header {
+    .scrolled &{
+        position: -webkit-sticky;
+        position: sticky;
+        top: -1px;
+        z-index: 9001;
+        padding-bottom: 0;
+        background-color: #fff;
+
+        .login-bar{
+            height: .3em;
+            position: relative;
+
+            .links{
+                position: absolute;
+                right: 0;
+                top: -1px;
+                li{
+                    a{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .logo-bar{
+            padding-bottom: 0;
+        }
+    }
+
+    .logo-bar{
+        .link-logo{
+            order: -1;
+            flex: 0 0 19%;
+            text-align: left;
+
+            img{
+                max-height: 60px;
+            }
+        }
+        .bbs-wrap{
+            flex: 0 0 20%;
+        }
+        .fx-social-wrapper{
+            flex: 0 0 60%;
+        }
+    }
+
+    .box#fx-social{
+        display: none !important;
+    }
+}
+
+//menu
+.menu {
+    background-color: transparent;
+
+    .innermenu {
+        .menu-list{
+            border-top: 0;
+            text-align: left;
+
+            li{
+                &.parent{
+                    &:hover{
+                        &>div{
+                            &>ul{
+                                background-color: #fff;
+                                min-width: 200px;                            
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .shop_index &{
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .menu .innermenu.container{
+        width: auto;
+    }
+}
+
+.main-module_gallery__1Ajgx{
+    z-index: 9001;
+}
+//eof header like rwd019 in rwd028

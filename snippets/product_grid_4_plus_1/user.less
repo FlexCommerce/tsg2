@@ -1,0 +1,64 @@
+/*
+    product grid 4 plus column witch modules for rwd028 + grid 2 on mobile
+
+*/
+
+
+.s-row .s-grid-9 .s-grid-3, .rwd .s-row .s-grid-9 .s-grid-3 {
+    width: 175px;
+}
+
+@media screen and (max-width: 1200px){
+    .s-row .s-grid-9 .s-grid-3, .rwd .s-row .s-grid-9 .s-grid-3 {
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 979px) and (min-width: 768px){
+    .s-row .s-grid-9 .s-grid-3, .rwd .s-row .s-grid-9 .s-grid-3 {
+        width: 140px;
+    }
+}
+
+// mobile
+@media screen and (max-width: 767px){
+    .rwd .main #box_mainproducts .products{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .s-row .s-grid-9 .s-grid-3, .rwd .s-row .s-grid-9 .s-grid-3 {
+        width: 49%;
+        .shop_index &{
+            width: 49%;
+        }
+    }
+}
+
+//product height
+
+.products.viewphot{
+    .product{
+        .s-grid-9 &{
+            height: 280px;
+            @media screen and (min-width: 980px){
+                height: 310px;
+            }
+
+            .prodimage{
+                .img-wrap{
+                    .rwd &{                    
+                        min-height: 175px;
+                        @media screen and (max-width: 1200px){
+                            min-height: 150px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// eof product grid 4 + 1 for rwd028
