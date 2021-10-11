@@ -1,0 +1,63 @@
+
+// GRID changes
+
+.s-row .s-grid-12 .s-grid-3,
+.rwd .s-row .s-grid-12 .s-grid-3 {
+    .shop_index & {
+        width: 230px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .s-row .s-grid-12 .s-grid-3,
+    .rwd .s-row .s-grid-12 .s-grid-3 {
+        .shop_index & {
+            width: 220px;
+        }
+    }
+}
+
+@media screen and (max-width: 979px) and (min-width: 768px) {
+
+    .s-row .s-grid-12 .s-grid-3,
+    .rwd .s-row .s-grid-12 .s-grid-3 {
+        .shop_index & {
+            width: 220px;
+        }
+    }
+}
+
+// mobile
+@media screen and (max-width: 767px) {
+    .rwd .main #box_mainproducts .products {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .s-row .s-grid-12 .s-grid-3,
+    .rwd .s-row .s-grid-12 .s-grid-3 {
+        width: 49%;
+
+        .shop_index & {
+            width: 49%;
+        }
+    }
+}
+
+//product height
+.products.viewphot {
+    .product {
+        @media screen and (min-width: 980px) {
+            height: 530px;
+        }
+
+        .shop_index & {
+            height: 410px;
+        }
+    }
+}
+
+// oef product grid 4 on front page for rwd028

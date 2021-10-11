@@ -1,0 +1,111 @@
+
+//pruct page like rwd019
+
+#box_productfull{
+    .maininfo{
+        & > .f-row{
+            & > .f-grid-6{
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+    .basket .form-basket {
+
+        .addtobasket-container {
+            margin-top: 1em;
+            padding: 10px 0;
+            border: 1px solid @border2;
+            border-width: 1px 0;
+            text-align: right;
+        }
+
+        .quantity_wrap{
+            float: none;
+            display: inline-block;
+        }
+
+        .button_wrap{
+            float: none;
+            display: inline-block;
+            min-width: 1%;
+            margin-left: 10px;
+        }
+    }
+}
+
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.tags-tmp{
+    li{
+        .border-radius(2px);
+        font-size: 11px;
+        letter-spacing: 0.1px;
+        padding: 1px 7px;
+        text-align: center;
+        text-transform: uppercase;
+
+        &.new{
+            background-color: @newTag;
+            color: @acolor;
+        }
+
+        &.promo{
+            background-color: @promoTag;
+            color: @bgcolor;
+        }
+    }
+}
+
+.smallgallery {
+    li{
+        border:0;
+        width: 90px;
+    }
+}
+
+.fx-gallery{
+    position: relative;
+    margin: 2em 0;
+
+    .tags{
+        position: absolute;
+        top: 0;
+        left: 0;
+        .tags-tmp();
+    }
+}
+
+.slick-slide img{
+    height: auto;
+    width: auto;
+}
+
+@media screen and (max-width: 767px){
+    .rwd #box_productfull .basket .form-basket .quantity_wrap{
+        float: left;
+        width: 20%;
+    }
+    .rwd #box_productfull .basket .form-basket .button_wrap{
+        float: right;
+        width: 75%;
+    }
+}
+
+
+.fx-gallery .slick-slider .slick-track{
+    display: flex;
+    align-items: center;
+   .r--l-flex.r--l-flex-vcenter{
+         align-self: center;
+     img{        
+       max-height: 560px;
+     }
+   }
+ }
+
+ //pruct page like rwd019

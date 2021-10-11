@@ -1,0 +1,91 @@
+/*
+ kod less do zmiany szerokości sekcji górnej oraz dolnej (dodatkowe komentarze oddzielają sekcje) tak by przyjmowała moduły na 100% szerokości ekranu.
+
+ ID modułu który chcemy dać na 100% podajemy w linii 21 i 46 dla mobile (jak jest więcej to po przecinku kolejne)
+
+*/
+
+
+// full width slider
+
+.top.row {
+    .container {
+        width: 100%;
+        max-width: 100%;
+
+        .box {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto 20px auto;
+
+            &.box-slider, &#id_boxa {
+                max-width: 100%;
+
+                .slider-nav.bullets {
+                    bottom: 16px;
+
+                    li {
+                        width: 12px;
+                        height: 12px;
+                        margin: 2px 6px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .top.row {
+        margin: 0;
+
+        .box {
+            margin-left: 2em;
+            margin-right: 2em;
+
+            &.box-slider, &#id_boxa {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+// eof full width slider
+
+
+// full width bottom-footer modules
+    
+.bottom-footer.row {
+    .container {
+        width: 100%;
+        max-width: 100%;
+
+        .box {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto 20px auto;
+
+            &#id_boxa {
+                max-width: 100%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .bottom-footer.row {
+        margin: 0;
+
+        .box {
+            margin-left: 2em;
+            margin-right: 2em;
+
+            &#id_boxa{
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+// eof full width bottom-footer modules
