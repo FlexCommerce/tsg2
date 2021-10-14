@@ -1,0 +1,219 @@
+.section_category {
+  margin-left: 0 !important;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  a {
+    display: block;
+    height: 190px;
+    img {
+      object-fit: cover;
+      height: 190px;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+}
+.ns-grid-3 {
+  width: 32%;
+  margin: 0 !important;
+  //   padding: 15px;
+  @media screen and (max-width: 980px) {
+    width: 45%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+.box-slider {
+  height: 300px;
+  .pageslider {
+    height: 300px;
+    .slides {
+      height: 300px !important;
+      li {
+        background-size: cover;
+        height: 300px !important;
+      }
+    }
+  }
+}
+.products {
+  &.viewphot {
+    .product {
+      height: 605px;
+      .prodimage {
+        .img-wrap {
+          img {
+            width: 100%;
+            object-fit: cover;
+            max-height: 480px;
+          }
+        }
+      }
+      .productname {
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+        line-height: 1.56;
+        color: #2c3238;
+      }
+      .price {
+        color: #2c3238;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 2.08;
+      }
+      .buttons {
+        .addtobasket {
+          color: #fff;
+          background-color: #bd6b59;
+          letter-spacing: 0.0098125rem;
+          font-weight: normal;
+          border: 1px solid #bd6b59;
+          padding-top: 0.4375rem;
+          padding-bottom: 0.4375rem;
+          padding-left: 1.25rem;
+          padding-right: 1.25rem;
+          font-size: 0.75rem;
+          line-height: 0.875rem;
+          border-radius: 2px;
+          span {
+            color: #fff;
+          }
+          &:hover {
+            color: #fff;
+            background-color: #bd6b59;
+            border-color: #bd6b59;
+            border: 1px solid #bd6b59;
+            opacity: 0.85;
+          }
+        }
+      }
+      .quickview {
+        display: none !important;
+      }
+    }
+  }
+}
+body {
+  background-color: #f3f3f3;
+}
+header {
+  .box#fx-social {
+    display: none;
+  }
+  .logo-bar {
+    align-items: flex-start;
+    .search__container {
+      order: -1;
+      position: absolute;
+      width: 200px;
+      top: 0;
+      left: 0;
+      margin-left: 0;
+      margin-right: auto;
+    }
+    .bbs-wrap.right {
+      .fx-search {
+        display: none;
+      }
+    }
+    .link-logo {
+      img {
+        max-height: 120px;
+      }
+    }
+  }
+}
+.menu {
+  background-color: #f3f3f3;
+  .innermenu {
+    border-top: 1px solid #e5d9d1;
+    .fx-social {
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: flex;
+      padding: 10px;
+      > li {
+        padding-left: 10px;
+        .fa::before {
+          color: #fff;
+        }
+        a {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: #375c4d;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    .menu-list {
+      li {
+        h3 a {
+          color: #375c4d;
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+        }
+      }
+    }
+  }
+}
+.footer {
+  background-color: #f3f3f3;
+  .innerfooter {
+    background-color: #f3f3f3;
+    justify-content: space-between;
+    align-items: flex-start;
+    &::before,
+    &::after {
+      content: none;
+    }
+    li {
+      font-size: 0.75rem;
+      color: #375c4d;
+      font-weight: 400;
+      a {
+        font-size: 0.75rem;
+        color: #375c4d;
+        font-weight: 400;
+        &:hover {
+          color: #375c4d;
+        }
+      }
+
+      &.head {
+        font-weight: 600;
+      }
+    }
+    #fx-social_footer {
+      display: none;
+    }
+  }
+  .user_footer {
+    text-align: right;
+    .social {
+      display: flex;
+      justify-content: flex-end;
+      ul.fx-social {
+        display: flex;
+        > li {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+#box_mainproducts {
+  .category-name {
+    font-size: 1.875rem;
+    line-height: 1.2;
+    color: #375c4d;
+  }
+}

@@ -393,6 +393,7 @@ Shop.include({
 });
 
 
+
 Shop.include({
     selectorFunctions: {
         imgReplace: {
@@ -407,7 +408,7 @@ Shop.include({
         }
     }
 });
-  Shop.include({
+Shop.include({
     selectorFunctions: {
         imgReplace: {
             selector: '.products.viewphot .product',
@@ -422,17 +423,8 @@ Shop.include({
     }
 });
 $(document).ready(function () {
-    if(document.getElementById('box_newsletter')){
-        var boxNewsletterContent = document.getElementById('box_newsletter');
-        var newDiv = document.createElement("div");
-        newDiv.className = 'container container--second';
-        newDiv.innerHTML = boxNewsletterContent.innerHTML;
-        $('#box_newsletter').html(newDiv);
-        let boxintro = $('#box_newsletter .boxintro');
-        $('#box_newsletter .boxhead span').append(boxintro.clone() );
-        boxintro.remove();
-        $('.footer .userfooter .row').append($('#fx-social_footer').clone() );
-
-
-    };
+    $('.menu .innermenu.row').append($('#fx-social .fx-social') );
+    $('.user_footer .social').append($('#fx-social_footer .fx-social') );
+    $('.innerfooter.container.row').append($('.userfooter.container .user_footer'));
+    $('#box_mainproducts .category-name').html('Nowa kolekcja');
 });
