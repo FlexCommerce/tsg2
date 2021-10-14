@@ -115,10 +115,17 @@ header {
       left: 0;
       margin-left: 0;
       margin-right: auto;
+      @media screen and (max-width: 992px) {
+        position: fixed;
+        top: -30vh;
+      }
     }
     .bbs-wrap.right {
       .fx-search {
         display: none;
+        @media screen and (max-width: 992px) {
+          display: block;
+        }
       }
     }
     .link-logo {
@@ -138,10 +145,15 @@ header {
       top: 0;
       display: flex;
       padding: 10px;
+      @media screen and(max-width: 967px) {
+        display: none;
+      }
       > li {
         padding-left: 10px;
-        .fa::before {
+        font-size: 0.75rem;
           color: #fff;
+          top: 4px;
+          position: absolute;
         }
         a {
           width: 20px;
@@ -149,6 +161,7 @@ header {
           border-radius: 50%;
           background-color: #375c4d;
           display: flex;
+          position: relative;
           justify-content: center;
           align-items: center;
         }
@@ -175,7 +188,7 @@ header {
     &::after {
       content: none;
     }
-    li {
+    ul li {
       font-size: 0.75rem;
       color: #375c4d;
       font-weight: 400;
@@ -190,14 +203,44 @@ header {
 
       &.head {
         font-weight: 600;
+        text-transform: capitalize;
       }
     }
     #fx-social_footer {
       display: none;
     }
+    ul.fx-social {
+      li {
+        padding-left: 10px;
+        font-size: 0.75rem;
+        position: relative;
+        a {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: #bd6b59;
+          display: flex;
+          position: relative;
+          justify-content: center;
+          align-items: center;
+          &.fa::before {
+            color: #fff;
+            top: 4px;
+            position: absolute;
+          }
+        }
+      }
+    }
   }
   .user_footer {
     text-align: right;
+    h2 {
+      margin-top: 0;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1px;
+      line-height: 25px;
+    }
     .social {
       display: flex;
       justify-content: flex-end;
