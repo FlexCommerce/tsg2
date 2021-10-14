@@ -30,14 +30,32 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+    &.viewphot {
+      .product {
+        .product-inner-wrap {
+          padding: 0;
+          .prodimage {
+            img {
+              max-height: 100%;
+            }
+          }
+          .price {
+            margin-bottom: 15px;
+          }
+          .productname {
+            padding-top: 0;
+          }
+        }
+      }
+    }
   }
 
   .s-row .s-grid-12 .s-grid-3,
   .rwd .s-row .s-grid-12 .s-grid-3 {
-    width: 49%;
+    width: 100%;
 
     .shop_index & {
-      width: 49%;
+      width: 100%;
     }
   }
 }
@@ -104,6 +122,7 @@
   padding: 15px;
   @media screen and (max-width: 980px) {
     width: 45%;
+    padding: 15px 0;
   }
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -128,6 +147,12 @@ header .logo-bar {
   }
   .link-logo {
     text-align: left;
+    @media screen and (max-width: 992px) {
+      img {
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
   }
   .search__container {
     max-width: 284px;
@@ -188,6 +213,13 @@ header .logo-bar {
       @media screen and (max-width: 992px) {
         > div {
           width: 100%;
+        }
+      }
+      @media screen and(max-width : 550px) {
+        text-align: center;
+        .innerbox fieldset {
+          flex-wrap: wrap;
+          justify-content: center;
         }
       }
     }
@@ -298,11 +330,19 @@ header .logo-bar {
             margin-left: 15px;
             width: 30px;
             height: 30px;
+            background-color: transparent;
             &::before {
-              font-size: 17px;
-              margin-top: 10px;
+              font-size: 30px;
+
               width: 30px;
               height: 30px;
+              color: #2d2d2d;
+            }
+            &:hover {
+              background-color: transparent;
+              &::before {
+                color: #2d2d2d;
+              }
             }
           }
         }
@@ -346,8 +386,18 @@ header .logo-bar {
     .form-basket {
       .button_wrap .btn {
         background: #faf2ef;
+        &:hover {
+          background: #faf2ef;
+          span {
+            color: #010101;
+          }
+        }
         span {
+          text-transform: uppercase;
           color: #010101;
+          &::after {
+            display: none;
+          }
         }
       }
     }
@@ -379,5 +429,10 @@ header .logo-bar {
     .basket-box {
       display: none;
     }
+  }
+}
+@media screen and(max-width: 973px) {
+  .box#fx-social_footer ul {
+    justify-content: center;
   }
 }
