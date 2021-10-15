@@ -434,6 +434,172 @@ $(document).ready(function () {
   headerNavbarEl.id = "fx-sticky";
 });
 
+
+$(document).ready(function () {
+  var productsHeaderHomePage = document.querySelector("div.boxhead");
+  if (!productsHeaderHomePage) return;
+
+  productsHeaderHomePage.parentElement.removeChild(productsHeaderHomePage);
+});
+
+$(document).ready(function () {
+  var newsletterIntroductionText = document.querySelector("h5.boxintro")
+  var newsletterInput = document.querySelector('#box_newsletter .innerbox .newsletter-input')
+  var newsletterBtnText = document.querySelector('.bottom-footer #box_newsletter .innerbox .btn.btn-red span')
+ 
+  if (!newsletterIntroductionText || !newsletterInput || !newsletterBtnText) return
+
+  var newsletterHead =
+    newsletterIntroductionText.parentElement.previousElementSibling
+
+  newsletterIntroductionText.parentElement.removeChild(newsletterIntroductionText)
+  newsletterHead.appendChild(newsletterIntroductionText)
+  
+  newsletterInput.placeholder = 'Your email'
+  
+  newsletterBtnText.textContent = 'Sign up'
+});
+
+$(document).ready(function () {
+  var topBar = document.createElement("div");
+  var optionsBar = document.querySelector("div.bbs-wrap.right");
+
+  var searchIcon = document.querySelector("div.fx-search");
+  var userIcon = document.querySelector("div.fx-panel");
+  var basketContainer = document.querySelector("div.bbs-wrap.right");
+
+  if (!optionsBar || !searchIcon || !userIcon || !basketContainer) return;
+
+  topBar.id = "top-bar";
+  topBar.appendChild(searchIcon);
+  topBar.appendChild(userIcon);
+  topBar.appendChild(basketContainer);
+
+  document.body.prepend(topBar);
+});
+
+$(document).ready(function () {
+  var addToCartBtns = document.querySelectorAll('div.buttons button.addtobasket.btn.btn-red span');
+  
+  if (addToCartBtns.length == 0) return
+  
+  for (var i = 0; i < addToCartBtns.length; i++) {
+    addToCartBtns[i].textContent = 'Add to basket'
+  }
+})
+
+$(document).ready(function () {
+  var colorFilter = document.getElementById('filter_option_8')
+  if (!colorFilter) return
+  
+  colorFilter.firstElementChild.textContent = 'Colors'
+})
+
+$(document).ready(function () {
+  var colorLabel = document.querySelector('#box_productfull .basket .form-basket .stocks label')
+  if (!colorLabel) return
+  
+  colorLabel.textContent = 'Colors:'
+})
+
+
+function injectSocialMediaModules() {
+  var socialHeader = document.getElementById('fx-social')
+  var socialFooter = document.getElementById('fx-social-footer')
+  
+  if (!socialHeader) {
+  var socialsHeaderModule = document.createElement('div')
+  socialsHeaderModule.style.display = 'none'
+  socialsHeaderModule.innerHTML = `<div class="fx-social-wrapper"> <div class="box resetcss box_custom" id="fx-social"> <ul> <li class="facebook"> <a href="https://www.facebook.com/winterwarmersshop/" aria-label="Facebook" target="_blank" rel="noopener nofolow" class="fa fa-facebook" ></a> </li><li class="twitter"> <a href="https://twitter.com/warmers_winter" aria-label="Twitter" target="_blank" rel="noopener nofolow" class="fa fa-twitter" ></a> </li><li class="instagram"> <a href="https://www.instagram.com/winterwarmersshop/" aria-label="Instagram" target="_blank" rel="noopener nofolow" class="fa fa-instagram" ></a> </li><li class="pinterest"> <a href="http://www.pinterest.com/winterwarmersshop" aria-label="Pinterest" target="_blank" rel="noopener nofolow" class="fa fa-pinterest" ></a> </li><li class="youtube"> <a href="https://www.youtube.com/channel/UCkUscNngHpuPJg3V_0Ve4bw?view_as=subscriber" aria-label="YouTube" target="_blank" rel="noopener nofolow" class="fa fa-youtube" ></a> </li></ul> </div></div>`
+  
+   document.body.prepend(socialsHeaderModule)
+  }
+  
+  if (!socialFooter) {
+    var socialsFooterModule = document.createElement('div')
+  socialsFooterModule.style.display = 'none'
+  socialsFooterModule.innerHTML = `<div class="box resetcss box_custom" id="fx-social-footer"><p>Find us on:</p><ul><li class="facebook"><a href="https://www.facebook.com/winterwarmersshop/" aria-label="Facebook" target="_blank" rel="noopener nofolow" class="fa fa-facebook"></a>
+</li><li class="twitter"><a href="https://twitter.com/warmers_winter" aria-label="Twitter" target="_blank" rel="noopener nofolow" class="fa fa-twitter"></a>
+</li><li class="instagram"><a href="https://www.instagram.com/winterwarmersshop/" aria-label="Instagram" target="_blank" rel="noopener nofolow" class="fa fa-instagram"></a></li>
+<li class="pinterest"><a href="http://www.pinterest.com/winterwarmersshop" aria-label="Pinterest" target="_blank" rel="noopener nofolow" class="fa fa-pinterest"></a>
+</li><li class="youtube"><a href="https://www.youtube.com/channel/UCkUscNngHpuPJg3V_0Ve4bw?view_as=subscriber" aria-label="YouTube" target="_blank" rel="noopener nofolow" class="fa fa-youtube"></a></li></ul><p>Copyrights © 2021 WINTER WARMERS SHOP</p></div>`;
+  
+ document.body.append(socialsFooterModule)
+  }
+}
+
+$(document).ready(function () {
+   // removes newsletter part in certain pages.
+  
+  var isAboutPage = location.href.endsWith('about')
+  var isContactPage = location.href.endsWith('contact')
+  var newsletterBox = document.getElementById('box_newsletter')
+  
+  newsletterBox.parentElement.removeChild(newsletterBox)
+})
+
+$(document).ready(function () {
+  // this only applies to /about page
+  
+  var isAboutPage = location.href.endsWith('about')
+  var aboutPageBox = document.querySelector('div.innerbox div.resetcss')
+  
+  if (!isAboutPage || !aboutPageBox) return
+  
+  // add the heading.to the page
+  if (isAboutPage) {
+    var heading = document.createElement('h1')
+  	heading.textContent = 'About Winter Warmers'
+  
+  	aboutPageBox.prepend(heading)
+  }
+})
+
+$(document).ready(function () {
+  var isSlashPage = location.href.includes(location.origin + '/')
+  var isAboutPage = location.href.endsWith('about')
+  var isContactPage = location.href.endsWith('contact')
+  var isLookbooksPage = location.href.endsWith('gallery-list')
+  var areCategoryPages = location.href.includes('/category') 
+  
+  var logo = document.querySelector('div.wrap header.row .logo-bar')
+  
+  
+  switch (true) {
+    case isContactPage: {
+      if (logo) {
+   		 logo.style.justifyContent = "normal"
+  	  }
+      break;
+    };
+    case isLookbooksPage:  {
+      if (logo) {
+   		 logo.style.justifyContent = "normal"
+  	  }
+      break;
+    };;
+    case isAboutPage:  {
+      if (logo) {
+   		 logo.style.justifyContent = "normal"
+  	  }
+      break;
+    };;
+    case areCategoryPages:  {
+      if (logo) {
+   		 logo.style.justifyContent = "normal"
+  	  }
+      break;
+    };
+    case isSlashPage: break;
+    default: {
+      return;
+    }
+  }
+ 
+  // inject socials modules
+  injectSocialMediaModules()
+})
+
 $(document).ready(function () {
   var socialsList = document.querySelector("div.fx-social-wrapper");
   var menuListDesktop = document.querySelector(
@@ -450,19 +616,136 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  var productsHeaderHomePage = document.querySelector("div.boxhead");
-  if (!productsHeaderHomePage) return;
+  var socialsFooter = document.querySelector('.footer .innerfooter ul.overall > li:last-child')
+  var socialsList = document.getElementById('fx-social-footer')
+  if (!socialsFooter || !socialsList) return
+  
+  socialsList.parentElement.removeChild(socialsList)
+  
+  socialsFooter.innerHTML = socialsList.outerHTML
+})
 
-  productsHeaderHomePage.parentElement.removeChild(productsHeaderHomePage);
-});
+$(document).ready(function() {
+  var isBlogPage = location.href.endsWith('blog')
+  
+  var commentBox = document.getElementById('box_articlecomments')
+  var newsletterBox = document.getElementById('box_newsletter')
+  
+  var articleRowToReplace = document.querySelector('article .article-info')
+  var articleDate = document.querySelector('span.article-date')
+  var articleAuthor = document.querySelector('span.article-author')
+  
+  
+  if (!isBlogPage || !commentBox || !newsletterBox || !articleDate || !articleAuthor || !articleRowToReplace) return
+  
+  commentBox.parentElement.removeChild(commentBox)
+  newsletterBox.parentElement.removeChild(newsletterBox)
+  
+  var splittedArticleDate = articleDate.textContent.split('-')
+  var date = splittedArticleDate[1] + '-' + splittedArticleDate[0] + '-' + splittedArticleDate[2]
+  var splittedDate = new Date(date).toDateString().split(' ')
+  var newArticleDate = splittedDate[2] + " " + splittedDate[1] + " " + splittedDate[3]
+  
+  var articleInfo = document.createElement('p')
+  articleInfo.textContent = articleAuthor.textContent + ", " + newArticleDate
+  articleInfo.id = 'article-info-blog'
+  
+  articleRowToReplace.innerHTML = articleInfo.outerHTML
+})
 
-$(document).ready(function () {
-  var newsletterIntroductionText = document.querySelector("h5.boxintro");
-  if (!newsletterIntroductionText) return;
+$(document).ready(function() {
+  var filterBrand = document.getElementById('filter_producer')
+  if (!filterBrand) return
+  
+  filterBrand.firstElementChild.textContent = 'Brand:'
+})
 
-  var newsletterHead =
-    newsletterIntroductionText.parentElement.previousElementSibling;
+$(document).ready(function() {
+  var colorFilter = document.getElementById('filter_option_8')
+  if (!colorFilter) return
+  
+  var filterHeading = document.createElement('p')
+  filterHeading.textContent = 'FILTER'
+  
+  var clearFilterBtn = document.createElement('button')
+  clearFilterBtn.textContent = 'Clear all filters'
+  clearFilterBtn.id = 'clear-filter-btn'
+  clearFilterBtn.onclick = function() {
+    var noFiltersURL = location.href.substring(0, location.href.indexOf('/1/')) || location.href
+    location.href = noFiltersURL
+  }
+  
+  var filterHeader = document.createElement('div')
+  filterHeader.id = 'filter-header'
+  
+  filterHeader.appendChild(filterHeading)
+  filterHeader.appendChild(clearFilterBtn)
+  
+  colorFilter.prepend(filterHeader)
+  
+  
+  
+  var brandFilter = document.getElementById('filter_producer')
+  var materialFilter = document.getElementById('filter_option_9')
+  if (!brandFilter || !materialFilter) return
+  
+  materialFilter.appendChild(brandFilter)
+  
+  var filterHeaders = document.querySelectorAll('.s-grid-3 #box_filter .innerbox .group-filter')
+  var colorHeading = document.getElementById('filter-header')
+  if (filterHeaders.length == 0 || !colorHeading) return
+  
+  
+  for (var i = 0; i < filterHeaders.length; i++) {
+    filterHeaders[i].firstElementChild.classList.add('filter-heading')
+  }
+  colorHeading.classList.remove('filter-heading')
+  colorHeading.firstElementChild.classList.add('filter-heading')
+  colorHeading.nextElementSibling.classList.add('filter-heading')
+  
+  
+  
+  var categoryHeader = document.querySelector('#box_mainproducts.box .boxhead>h1')
+  if (!categoryHeader) return
+  
+  var filterBtn = document.createElement('button')
+  filterBtn.id = 'filter-button-mobile'
+  filterBtn.innerHTML = '<span>Filter</span>'
+  filterBtn.onclick = function() {
+    var modal = document.getElementById('filter-modal-mobile')
+  	var filterBtn = document.getElementById('filter-button-mobile')
+  	var filtersContainer = document.getElementById('box_filter')
+    
+    if (!modal || !filterBtn || !filtersContainer) return
+    
+    var cloneFilterContainer = filtersContainer.cloneNode(true)
+    var cloneFilterBtn = filterBtn.cloneNode(true)
+    cloneFilterBtn.textContent = 'Close'
+    
+    cloneFilterBtn.onclick = function() {
+      document.body.style.overflow = ''
+      modal.classList.toggle('filter-modal-mobile_active')
+ 
+      modal.innerHTML = ''
+      
+      return
+    }
+    
+   
+    modal.classList.toggle('filter-modal-mobile_active')
 
-  newsletterIntroductionText.parentElement.removeChild(newsletterIntroductionText);
-  newsletterHead.appendChild(newsletterIntroductionText);
-});
+    cloneFilterBtn.classList.add('filter-button-mobile_active')
+    cloneFilterContainer.classList.add('filter-container-mobile_active')
+    
+    modal.appendChild(cloneFilterContainer)
+    modal.appendChild(cloneFilterBtn)
+    
+    document.body.style.overflow = 'hidden'
+  }
+  
+  var filterModalMobile = document.createElement('div')
+  filterModalMobile.id = 'filter-modal-mobile'
+  
+  categoryHeader.insertAdjacentElement('afterend', filterBtn)
+  document.body.append(filterModalMobile)
+})
