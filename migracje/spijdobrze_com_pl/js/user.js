@@ -427,4 +427,5 @@ $(document).ready(function () {
     $('.user_footer .social').append($('#fx-social_footer .fx-social') );
     $('.innerfooter.container.row').append($('.userfooter.container .user_footer'));
     $('#box_mainproducts .category-name').html('Nowa kolekcja');
+    $('.product-main-box .productimg.f-grid-6').addClass('change_layout');
 });
