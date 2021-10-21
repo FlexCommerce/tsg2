@@ -1,0 +1,27 @@
+
+// -------------------     tablet is from RWD mixin files     --------------------
+.tablet(@rules) {
+    @media screen and (max-width: 767px) { @rules(); }
+}
+
+
+// -------------------     Transform photos to better display on mobile     --------------------
+.phonePhoto(@paddingHorizontal) {
+    .tablet({
+      width: 100%;
+      max-height: 130px;
+      background-size: contain;
+      height: 120px;
+      padding: @paddingHorizontal 0;
+      object-fit: cover;
+    });
+  }
+
+// -------------------     USAGE EXAMPLE     --------------------
+// #myImages is id of module
+  #myImages {
+    p img{
+        .phonePhoto(4px);
+    }
+  }
+
