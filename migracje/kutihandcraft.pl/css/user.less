@@ -1,0 +1,334 @@
+.section_category {
+  margin-left: 0 !important;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+
+  a {
+    display: block;
+    height: auto;
+    padding: 0;
+    @media screen and (max-width: 980px) {
+      padding: 15px 0;
+    }
+    img {
+      height: auto;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+}
+.ns-grid-3 {
+  width: 32%;
+  margin: 0 !important;
+  padding: 15px;
+  @media screen and (max-width: 980px) {
+    width: 45%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+#ms24 {
+  padding: 40px 0;
+  border-top: 1px solid #e4e7eb;
+  border-bottom: 1px solid #e4e7eb;
+  img {
+    max-height: 282px;
+    max-width: 100%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  .ms-col_2 {
+    max-width: 41%;
+    strong {
+      font-size: 32px;
+      color: #2c3238;
+      line-height: 42px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 21px;
+      color: #2c3238;
+    }
+    @media screen and (max-width: 768px) {
+      padding-left: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+    .btn {
+      padding-top: 0.4375rem;
+      padding-bottom: 0.4375rem;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      font-size: 0.8125rem;
+      line-height: 0.9375rem;
+      border-radius: 2px;
+      color: #ffffff;
+      background: #004643;
+      border: 1px solid #004643;
+      &:hover {
+        outline: none;
+        opacity: 0.85;
+      }
+    }
+  }
+}
+.products {
+  &.viewphot {
+    .product {
+      .prodimage {
+        .img-wrap {
+          img {
+            width: 100%;
+            object-fit: cover;
+            max-height: 237px;
+            max-width: 237px;
+            transition: opacity, 0.2s;
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+      .productname {
+        color: #2c3238;
+        font-size: 1.3125rem;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+        line-height: 1.56;
+        margin: 10px 0 0;
+      }
+      .price {
+        color: #2c3238;
+        font-size: 0.8125rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 2.08;
+      }
+      .buttons {
+        .addtobasket {
+          display: none;
+        }
+      }
+      .quickview {
+        display: none !important;
+      }
+    }
+  }
+}
+#box_newsletter {
+  max-width: 80%;
+  margin: 0 auto;
+  .boxhead {
+    justify-content: center;
+  }
+  .innerbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    input {
+      margin-right: 1.25rem;
+    }
+  }
+}
+.footer {
+  .overall {
+    > ul > li {
+      margin-top: 0;
+    }
+  }
+  .innerfooter {
+    align-items: flex-start;
+    text-align: right;
+    h2 {
+      margin: 0;
+    }
+  }
+  .box#fx-social_footer {
+    ul.fx-social {
+      padding-top: 5px;
+      margin-bottom: 30px;
+    }
+    @media screen and(max-width:768px) {
+      margin-left: 0;
+      text-align: left;
+      padding-left: 2em;
+      .fx-social {
+        justify-content: flex-start;
+      }
+      .shb-footer-copyright {
+        text-align: left;
+      }
+    }
+  }
+  .shb-footer-copyright {
+    max-width: 340px;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    line-height: 1.3;
+    color: #696969;
+  }
+}
+
+//pruct page like rwd019
+
+#box_productfull {
+  .maininfo {
+    & > .f-row {
+      & > .f-grid-6 {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
+  .basket .form-basket {
+    .addtobasket-container {
+      margin-top: 1em;
+      padding: 10px 0;
+      border: 1px solid @border2;
+      border-width: 1px 0;
+      text-align: right;
+    }
+
+    .quantity_wrap {
+      float: none;
+      display: inline-block;
+    }
+
+    .button_wrap {
+      float: none;
+      display: inline-block;
+      min-width: 1%;
+      margin-left: 10px;
+    }
+  }
+}
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.tags-tmp {
+  li {
+    .border-radius(2px);
+    font-size: 11px;
+    letter-spacing: 0.1px;
+    padding: 1px 7px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &.new {
+      background-color: @newTag;
+      color: @acolor;
+    }
+
+    &.promo {
+      background-color: @promoTag;
+      color: @bgcolor;
+    }
+  }
+}
+
+.smallgallery {
+  li {
+    border: 0;
+    width: 90px;
+  }
+}
+
+.fx-gallery {
+  position: relative;
+  margin: 2em 0;
+
+  .tags {
+    position: absolute;
+    top: 0;
+    left: 0;
+    .tags-tmp();
+  }
+}
+
+.slick-slide img {
+  height: auto;
+  width: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .rwd #box_productfull .basket .form-basket .quantity_wrap {
+    float: left;
+    width: 20%;
+  }
+  .rwd #box_productfull .basket .form-basket .button_wrap {
+    float: right;
+    width: 75%;
+  }
+}
+
+.fx-gallery .slick-slider .slick-track {
+  display: flex;
+  align-items: center;
+  .r--l-flex.r--l-flex-vcenter {
+    align-self: center;
+    img {
+      max-height: 560px;
+    }
+  }
+}
+#box_recent {
+  .innerbox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .product {
+      border: none;
+      @media screen and(max-width:768px) {
+        margin: 0 auto;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        max-height: 237px;
+        max-width: 237px;
+        transition: opacity, 0.2s;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+      .productname {
+        color: #2c3238;
+        font-size: 1.3125rem;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+        line-height: 1.56;
+        margin: 10px 0 0;
+      }
+      .price {
+        color: #2c3238;
+        font-size: 0.8125rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 2.08;
+      }
+      .basket {
+        .addtobasket {
+          display: none;
+        }
+      }
+      .quickview {
+        display: none !important;
+      }
+    }
+  }
+}
+
+//pruct page like rwd019

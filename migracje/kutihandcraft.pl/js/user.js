@@ -393,7 +393,6 @@ Shop.include({
 });
 
 
-
 Shop.include({
     selectorFunctions: {
         imgReplace: {
@@ -408,7 +407,7 @@ Shop.include({
         }
     }
 });
-Shop.include({
+  Shop.include({
     selectorFunctions: {
         imgReplace: {
             selector: '.products.viewphot .product',
@@ -423,19 +422,17 @@ Shop.include({
     }
 });
 $(document).ready(function () {
-    $('.menu .innermenu.row').append($('#fx-social .fx-social') );
-    $('.user_footer .social').append($('#fx-social_footer .fx-social') );
-    $('.innerfooter.container.row').append($('.userfooter.container .user_footer'));
-    $('#box_mainproducts .category-name').html('Nowa kolekcja');
-    $('.product-main-box .productimg.f-grid-6').addClass('change_layout');
-});
-$(document).ready(function () {
-    if(document.getElementById('banner_full_width')){
-        var boxNewsletterContent = document.getElementById('banner_full_width');
+    if(document.getElementById('box_newsletter')){
+        var boxNewsletterContent = document.getElementById('box_newsletter');
         var newDiv = document.createElement("div");
         newDiv.className = 'container container--second';
         newDiv.innerHTML = boxNewsletterContent.innerHTML;
-        $('.bottom-footer').prepend(newDiv);
-        boxNewsletterContent.remove();
+        $('#box_newsletter').html(newDiv);
+        let boxintro = $('#box_newsletter .boxintro');
+        $('#box_newsletter .boxhead span').append(boxintro.clone() );
+        boxintro.remove();
+        $('.footer .userfooter .row').append($('#fx-social_footer').clone() );
+
+
     };
 });
