@@ -1,0 +1,102 @@
+@main-color: #2c3238;
+
+body,
+a {
+  color: @main-color!important;
+}
+.top.row {
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    width: auto;
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+    .box-slider .pageslider .slides li > div {
+      width: 100%;
+    }
+  }
+}
+
+// GRID changes
+
+.s-row .s-grid-12 .s-grid-3,
+.rwd .s-row .s-grid-12 .s-grid-3 {
+    .shop_index & {
+        width: 230px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .s-row .s-grid-12 .s-grid-3,
+    .rwd .s-row .s-grid-12 .s-grid-3 {
+        .shop_index & {
+            width: 220px;
+        }
+    }
+}
+
+@media screen and (max-width: 979px) and (min-width: 768px) {
+
+    .s-row .s-grid-12 .s-grid-3,
+    .rwd .s-row .s-grid-12 .s-grid-3 {
+        .shop_index & {
+            width: 220px;
+        }
+    }
+}
+
+// mobile
+@media screen and (max-width: 767px) {
+    .rwd .main #box_mainproducts .products {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .s-row .s-grid-12 .s-grid-3,
+    .rwd .s-row .s-grid-12 .s-grid-3 {
+        width: 100%;
+
+        .shop_index & {
+            width: 100%;
+        }
+    }
+}
+
+//product height
+.products.viewphot {
+    .product {
+        @media screen and (min-width: 980px) {
+            height: 530px;
+        }
+
+        .shop_index & {
+            height: 410px;
+        }
+    }
+}
+
+// oef product grid 4 on front page for rwd028
+.menu .innermenu .menu-list{
+  text-align: left;
+  @media screen and (max-width: 750px) {
+    text-align: center;
+  }
+}
+header{
+  .fx-social-wrapper{
+    display: none;
+  }
+  .logo-bar{
+    justify-content: space-between;
+    .link-logo{
+      text-align: left;
+    }
+  }
+}

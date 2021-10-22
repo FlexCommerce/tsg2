@@ -1,0 +1,136 @@
+@main-color: #2c3238;
+
+body,
+a {
+  color: @main-color!important;
+}
+.top.row {
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+    width: auto;
+  }
+  #banner_full_width {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+}
+#box_languages {
+  label.singleselect {
+    display: none;
+  }
+}
+.box_two_images {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  h2 {
+    width: 100%;
+    text-align: center;
+    padding: 1.375rem 0;
+    margin: 0;
+    font-size: 1.875rem;
+    line-height: 1.2;
+    color: @main-color;
+  }
+  > p {
+    width: calc(50% - 0.625rem);
+    margin: 0;
+    img {
+      height: 490px;
+      width: 100%;
+      object-fit: cover;
+    }
+    @media screen and(max-width:768px) {
+      width: 100%;
+      padding-bottom: 0.625rem;
+    }
+  }
+  &__height {
+    > p img {
+      height: 693px;
+    }
+  }
+}
+.box_three_images {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  h2 {
+    width: 100%;
+    text-align: center;
+    padding: 1.375rem 0;
+    margin: 0;
+    font-size: 1.875rem;
+    line-height: 1.2;
+    color: @main-color;
+  }
+  > p {
+    width: calc(33% - 0.625rem);
+    margin: 0;
+    img {
+      height: 320px;
+      width: 100%;
+      object-fit: cover;
+    }
+    @media screen and(max-width:768px) {
+      width: 100%;
+      padding-bottom: 0.625rem;
+    }
+  }
+}
+.footer {
+  .innerfooter {
+    background-color: transparent;
+    ul.overall {
+      max-width: 100%;
+      li {
+        &.head {
+          font-size: 0.75rem;
+          font-weight: 600;
+          letter-spacing: 0.1px;
+          line-height: 25px;
+          color: @main-color;
+        }
+        a {
+          font-size: 0.75rem;
+          letter-spacing: 0.1px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+  .container--second {
+    background: #2c3238;
+    max-width: 100%;
+    color: #fff;
+    #fx-social_footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media screen and(max-width:768px) {
+        flex-direction: column;
+        padding-right: 0;
+      }
+    }
+    .shb-footer-logo a {
+      color: #fff !important;
+    }
+    .shb-footer-copyright {
+      color: #fff;
+      text-align: center !important;
+      a {
+        color: #fff !important;
+      }
+    }
+    .box#fx-social_footer ul li a {
+      background-color: #fff;
+      &::before {
+        color: #2c3238;
+      }
+    }
+  }
+}
